@@ -32,9 +32,7 @@ const SkillCarousel = () => {
       onPress: () => {
         carousel.style.cursor = 'grabbing';
       },
-      onRelease: () => {
-        carousel.style.cursor = 'grab';
-      },
+      onRelease: () => {carousel.style.cursor = 'grab';},
       onChange: (self) => {
         gsap.killTweensOf(progress);
         const p = self.event.type === 'wheel' ? self.deltaY * -0.0005 : self.deltaX * 0.05;

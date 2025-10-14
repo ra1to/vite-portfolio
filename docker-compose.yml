@@ -1,0 +1,33 @@
+services:
+  # フロントエンド開発用のコンテナサービスを定義
+  frontend:
+    # 現在のディレクトリにある Dockerfile を使ってイメージをビルド
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development # development ステージを使用
+
+    container_name: vite-react-app-dev
+    
+    # 💥最も重要: ホストPCのコードとコンテナ内のコードを同期させる💥
+    volumes:
+      # ホストPCの現在のディレクトリ(.) を、コンテナ内の /app にマウント（共有）
+      - .:/app
+      # コンテナ内の node_modules フォルダのキャッシュがホスト側に漏れないようにする
+      - /app/node_modules 
+      
+    # ポートマッピング: ホストのポート -> コンテナのポート
+    ports:
+      - "3000:3000" # Vite 開発サーバーのポート
+      - "6006:6006" # Storybook のポート
+
+    # コンテナ起動時に実行するコマンド
+    # Vite 開発サーバーを起動し、HMR がホストからアクセスできるように 0.0.0.0 でリッスン
+    command: bun run dev --host 0.0.0.0
+    
+    # 環境変数
+    environment:
+      # Vite がコンテナ外（ホストPC）からのアクセスを受け付けるように設定
+      VITE_HOST: 0.0.0.0
+      # 開発中のファイルの変更を検知するために必要な場合がある設定 (macOS/Linux向け)
+      # WATCHPACK_POLLING: 'true'
