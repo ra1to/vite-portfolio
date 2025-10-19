@@ -1,7 +1,7 @@
 import React from 'react';
 import profileImage from '../Images/blackholl.gif';
-import SkillsSection from './components/SkillCompoenents/SkillsSection';
-import SkillCarousel from './components/SkillCompoenents/SkillsCaousel';
+import {SkillsSection} from './components/SkillComponents/SkillsSection';
+import {SkillCarousel} from './components/SkillComponents/SkillsCaousel';
 
 const HomePage = () => {
   return (
