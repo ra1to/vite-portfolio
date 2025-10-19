@@ -1,7 +1,7 @@
 import React from 'react';
-import profileImage from '../Images/blackholl.gif';
-import {SkillsSection} from './components/SkillComponents/SkillsSection';
-import {SkillCarousel} from './components/SkillComponents/SkillsCaousel';
+import profileImage from '../Images/Blackholl';
+import SkillsSection from './components/SkillComponents/SkillsSection';
+import SkillCarousel from './components/SkillComponents/SkillsCaousel';
 
 const HomePage = () => {
   return (
@@ -64,7 +64,7 @@ const HomePage = () => {
       <section className="page-section" id="services">
       </section>
         <SkillsSection />
-        <SkillCarousel/>
+        <SkillCarousel />
     </div>
   );
 }
