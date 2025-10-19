@@ -84,7 +84,7 @@ const skills = [
 
 const categories = ["All","Frontend", "Backend", "Tools"];
 
-export default SkillsSection = () => {
+export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [,setMounted] = useState(false);
@@ -487,3 +487,4 @@ export default SkillsSection = () => {
     </section>
   );
 };
+export default SkillsSections;
