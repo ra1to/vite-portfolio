@@ -84,7 +84,7 @@ const skills = [
 
 const categories = ["All","Frontend", "Backend", "Tools"];
 
-export const SkillsSection = () => {
+export const SkillsSections = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [,setMounted] = useState(false);
@@ -486,4 +486,3 @@ export const SkillsSection = () => {
       `}</style>
     </section>
   );
-}
