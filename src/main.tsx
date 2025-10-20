@@ -1,6 +1,9 @@
 import profileImage from '../Images/Blackholl';
+import {Header} from './components/HeaderComponents/Header'
 import {SkillsSection} from './components/SkillComponents/SkillsSection';
 import {SkillCarousel} from './components/SkillComponents/SkillsCaousel';
+
+  <Header />
 
 export const HomePage = () => {
   return (
