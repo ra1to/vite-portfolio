@@ -14,7 +14,7 @@ import { Observer } from 'gsap/Observer';
 
 gsap.registerPlugin(Observer);
 
-const SkillCarousel = () => {
+export const SkillCarousel = () => {
   const carouselRef = useRef(null);
 
   // useEffectを修正しました
@@ -98,5 +98,3 @@ const SkillCarousel = () => {
     </div>
   );
 }
-
-export default SkillCarousel;

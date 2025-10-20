@@ -1,9 +1,8 @@
-import React from 'react';
 import profileImage from '../Images/Blackholl';
-import SkillsSections from './components/SkillComponents/SkillsSections';
-import SkillCarousel from './components/SkillComponents/SkillsCaousel';
+import {SkillsSection} from './components/SkillComponents/SkillsSection';
+import {SkillCarousel} from './components/SkillComponents/SkillsCaousel';
 
-const HomePage = () => {
+export const HomePage = () => {
   return (
     <div className="container text-center">
       <h1>Ra1to code</h1>
@@ -63,10 +62,8 @@ const HomePage = () => {
       </section>
       <section className="page-section" id="services">
       </section>
-      <SkillsSections />
+      <SkillsSection />
       <SkillCarousel />
     </div>
   );
 }
-
-export default HomePage;
