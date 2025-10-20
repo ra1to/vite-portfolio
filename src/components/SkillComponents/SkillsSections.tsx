@@ -7,78 +7,78 @@ import { motion, AnimatePresence } from "framer-motion";
 const skills = [
   // Frontend
   {
-    name: "HTML/CSS", 
-    level: 90, 
-    category: "Frontend",
-    icon: "devicon-html5-plain",
-    description: "Creating responsive, accessible and semantic markup with modern CSS techniques"
+    SkillName: "HTML/CSS", 
+    SkillLevel: 90, 
+    Category: "Frontend",
+    Icon: "devicon-html5-plain",
+    Description: "Creating responsive, accessible and semantic markup with modern CSS techniques"
   },
   { 
-    name: "Typescript", 
-    level: 60, 
-    category: "Frontend",
-    icon: "devicon-typescript-plain",
-    description: "ES6+, async/await, DOM manipulation, and modern TS patterns"
+    SkillName: "Typescript", 
+    SkillLevel: 60, 
+    Category: "Frontend",
+    Icon: "devicon-typescript-plain",
+    Description: "ES6+, async/await, DOM manipulation, and modern TS patterns"
   },
   { 
-    name: "React", 
-    level: 50, 
-    category: "Frontend",
-    icon: "devicon-react-original",
-    description: "Building complex UI with hooks, context API, and state management"
+    SkillName: "React", 
+    SkillLevel: 50, 
+    Category: "Frontend",
+    Icon: "devicon-react-original",
+    Description: "Building complex UI with hooks, context API, and state management"
   },
   { 
-    name: "Tailwind CSS", 
-    level: 70, 
-    category: "Frontend",
-    icon: "devicon-tailwindcss-plain",
-    description: "Utility-first approach for rapid UI development with custom configurations"
+    SkillName: "Tailwind CSS", 
+    SkillSkillLevel: 70, 
+    Category: "Frontend",
+    Icon: "devicon-tailwindcss-plain",
+    Description: "Utility-first approach for rapid UI development with custom configurations"
   },
 
-  { name: "Next.js", 
-    level: 70, 
-    category: "Frontend",
-    icon: "devicon-nextjs-plain",
-    description: "Utility-first approach for rapid UI development with custom configurations"
+  { SkillName: "Next.js", 
+    SkillSkillLevel: 70, 
+    Category: "Frontend",
+    Icon: "devicon-nextjs-plain",
+    Description: "Utility-first approach for rapid UI development with custom configurations"
   },
 
   // Backend
   { 
-    name: "Node.js", 
-    level: 50, 
-    category: "Backend",
-    icon: "devicon-nodejs-plain",
-    description: "Server-side JavaScript, RESTful APIs, and microservices"
+    SkillName: "Node.js", 
+    SkillLevel: 50, 
+    Category: "Backend",
+    Icon: "devicon-nodejs-plain",
+    Description: "Server-side JavaScript, RESTful APIs, and microservices"
   },
   { 
-    name: "Supabase", 
-    level: 65, 
-    category: "Backend",
-    icon: "devicon-supabase-plain",
-    // description: "Relational database design, complex queries, and performance optimization"
+    SkillName: "Supabase", 
+    SkillLevel: 65, 
+    Category: "Backend",
+    Icon: "devicon-supabase-plain",
+    Description: "Relational database design, complex queries, and performance optimization"
   },
 
   // Tools
   { 
-    name: "Git/GitHub", 
-    level: 50, 
-    category: "Tools",
-    icon: "devicon-git-plain",
-    description: "Version control, collaborative workflows, and CI/CD integration"
+    SkillName: "Git/GitHub", 
+    SkillLevel: 50, 
+    Category: "Tools",
+    Icon: "devicon-git-plain",
+    Description: "Version control, collaborative workflows, and CI/CD integration"
   },
   { 
-    name: "Figma", 
-    level: 45, 
-    category: "Tools",
-    icon: "devicon-figma-plain",
-    description: "UI/UX design, prototyping, and design system management"
+    SkillName: "Figma", 
+    SkillLevel: 45, 
+    Category: "Tools",
+    Icon: "devicon-figma-plain",
+    Description: "UI/UX design, prototyping, and design system management"
   },
   { 
-    name: "VS Code", 
-    level: 70, 
-    category: "Tools",
-    icon: "devicon-vscode-plain",
-    description: "Advanced IDE customization, extensions, and productivity workflows"
+    SkillName: "VS Code", 
+    SkillLevel: 70, 
+    Category: "Tools",
+    Icon: "devicon-vscode-plain",
+    Description: "Advanced IDE customization, extensions, and productivity workflows"
   },
 ];
 
@@ -115,8 +115,8 @@ export const SkillsSection = () => {
     (skill) => activeCategory === "All" || skill.category === activeCategory
   );
   
-  // Sort skills by level (highest first)
-  const sortedSkills = [...filteredSkills].sort((a, b) => b.level - a.level);
+  // Sort skills by SkillLevel (highest first)
+  const sortedSkills = [...filteredSkills].sort((a, b) => b.SkillLevel - a.SkillLevel);
   
   // Split skills into two arrays for the two scrolling rows
   const firstRowSkills = [...sortedSkills];
@@ -126,13 +126,13 @@ export const SkillsSection = () => {
     setSelectedSkill(selectedSkill?.name === skill.name ? null : skill);
   };
   
-  // Calculate progress color based on level
-  const getProgressColor = (level) => {
-    if (level >= 90) return "from-emerald-500 to-green-400";
-    if (level >= 80) return "from-blue-500 to-cyan-400";
-    if (level >= 70) return "from-indigo-500 to-blue-400";
-    if (level >= 60) return "from-violet-500 to-purple-400";
-    if (level >= 50) return "from-pink-500 to-rose-400";
+  // Calculate progress color based on SkillLevel
+  const getProgressColor = (SkillLevel) => {
+    if (SkillLevel >= 90) return "from-emerald-500 to-green-400";
+    if (SkillLevel >= 80) return "from-blue-500 to-cyan-400";
+    if (SkillLevel >= 70) return "from-indigo-500 to-blue-400";
+    if (SkillLevel >= 60) return "from-violet-500 to-purple-400";
+    if (SkillLevel >= 50) return "from-pink-500 to-rose-400";
     return "from-red-500 to-orange-400";
   };
 
@@ -146,12 +146,12 @@ export const SkillsSection = () => {
     }
   };
 
-  // Calculate mastery level text
-  const getMasteryLevel = (level) => {
-    if (level >= 90) return "Expert";
-    if (level >= 80) return "Advanced";
-    if (level >= 70) return "Proficient";
-    if (level >= 50) return "Intermediate";
+  // Calculate mastery SkillLevel text
+  const getMasterySkillLevel = (SkillLevel) => {
+    if (SkillLevel >= 90) return "Expert";
+    if (SkillLevel >= 80) return "Advanced";
+    if (SkillLevel >= 70) return "Proficient";
+    if (SkillLevel >= 50) return "Intermediate";
     return "Beginner";
   };
 
@@ -220,14 +220,14 @@ export const SkillsSection = () => {
                           <h3 className="font-bold text-lg">{skill.name}</h3>
                         </div>
                         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary">
-                          {getMasteryLevel(skill.level)}
+                          {getMasterySkillLevel(skill.SkillLevel)}
                         </span>
                       </div>
                       
                       <div className="relative w-full h-2.5 rounded-full overflow-hidden bg-secondary/50 mb-2">
                         <div
-                          style={{ width: `${skill.level}%` }}
-                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.level)}`}
+                          style={{ width: `${skill.SkillLevel}%` }}
+                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.SkillLevel)}`}
                         />
                       </div>
                       
@@ -236,7 +236,7 @@ export const SkillsSection = () => {
                           {skill.category}
                         </span>
                         <span className="text-sm font-semibold">
-                          {skill.level}%
+                          {skill.SkillLevel}%
                         </span>
                       </div>
                     </div>
@@ -261,14 +261,14 @@ export const SkillsSection = () => {
                           <h3 className="font-bold text-lg">{skill.name}</h3>
                         </div>
                         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary">
-                          {getMasteryLevel(skill.level)}
+                          {getMasterySkillLevel(skill.SkillLevel)}
                         </span>
                       </div>
                       
                       <div className="relative w-full h-2.5 rounded-full overflow-hidden bg-secondary/50 mb-2">
                         <div
-                          style={{ width: `${skill.level}%` }}
-                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.level)}`}
+                          style={{ width: `${skill.SkillLevel}%` }}
+                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.SkillLevel)}`}
                         />
                       </div>
                       
@@ -277,7 +277,7 @@ export const SkillsSection = () => {
                           {skill.category}
                         </span>
                         <span className="text-sm font-semibold">
-                          {skill.level}%
+                          {skill.SkillLevel}%
                         </span>
                       </div>
                     </div>
@@ -309,14 +309,14 @@ export const SkillsSection = () => {
                           <h3 className="font-bold text-lg">{skill.name}</h3>
                         </div>
                         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary">
-                          {getMasteryLevel(skill.level)}
+                          {getMasterySkillLevel(skill.SkillLevel)}
                         </span>
                       </div>
                       
                       <div className="relative w-full h-2.5 rounded-full overflow-hidden bg-secondary/50 mb-2">
                         <div
-                          style={{ width: `${skill.level}%` }}
-                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.level)}`}
+                          style={{ width: `${skill.SkillLevel}%` }}
+                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.SkillLevel)}`}
                         />
                       </div>
                       
@@ -325,7 +325,7 @@ export const SkillsSection = () => {
                           {skill.category}
                         </span>
                         <span className="text-sm font-semibold">
-                          {skill.level}%
+                          {skill.SkillLevel}%
                         </span>
                       </div>
                     </div>
@@ -350,14 +350,14 @@ export const SkillsSection = () => {
                           <h3 className="font-bold text-lg">{skill.name}</h3>
                         </div>
                         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary">
-                          {getMasteryLevel(skill.level)}
+                          {getMasterySkillLevel(skill.SkillLevel)}
                         </span>
                       </div>
                       
                       <div className="relative w-full h-2.5 rounded-full overflow-hidden bg-secondary/50 mb-2">
                         <div
-                          style={{ width: `${skill.level}%` }}
-                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.level)}`}
+                          style={{ width: `${skill.SkillLevel}%` }}
+                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.SkillLevel)}`}
                         />
                       </div>
                       
@@ -366,7 +366,7 @@ export const SkillsSection = () => {
                           {skill.category}
                         </span>
                         <span className="text-sm font-semibold">
-                          {skill.level}%
+                          {skill.SkillLevel}%
                         </span>
                       </div>
                     </div>
@@ -405,7 +405,7 @@ export const SkillsSection = () => {
                         {selectedSkill.category}
                       </span>
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary">
-                        {getMasteryLevel(selectedSkill.level)}
+                        {getMasterySkillLevel(selectedSkill.SkillLevel)}
                       </span>
                     </div>
                   </div>
@@ -413,13 +413,13 @@ export const SkillsSection = () => {
                 
                 <div className="relative w-full h-3 rounded-full overflow-hidden bg-secondary/50 mb-3">
                   <div
-                    style={{ width: `${selectedSkill.level}%` }}
-                    className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(selectedSkill.level)}`}
+                    style={{ width: `${selectedSkill.SkillLevel}%` }}
+                    className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(selectedSkill.SkillLevel)}`}
                   />
                 </div>
                 
                 <div className="text-right mb-4">
-                  <span className="text-lg font-bold">{selectedSkill.level}%</span>
+                  <span className="text-lg font-bold">{selectedSkill.SkillLevel}%</span>
                 </div>
                 
                 <div className="border-t border-border pt-4">
@@ -486,5 +486,4 @@ export const SkillsSection = () => {
       `}</style>
     </section>
   );
-};
-export default SkillsSections;
+}

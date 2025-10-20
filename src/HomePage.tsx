@@ -3,7 +3,7 @@ import profileImage from '../Images/Blackholl';
 import SkillsSections from './components/SkillComponents/SkillsSections';
 import SkillCarousel from './components/SkillComponents/SkillsCaousel';
 
-const HomePage = () => {
+export const HomePage = () => {
   return (
     <div className="container text-center">
       <h1>Ra1to code</h1>
@@ -68,5 +68,3 @@ const HomePage = () => {
     </div>
   );
 }
-
-export default HomePage;
