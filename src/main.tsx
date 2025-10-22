@@ -1,7 +1,7 @@
-import profileImage from '../Images/Blackholl';
+import ProfileImage from './Images/Blackholl';
 import {Header} from './components/HeaderComponents/Header'
 import {SkillsSection} from './components/SkillComponents/SkillsSection';
-import {SkillCarousel} from './components/SkillComponents/SkillsCaousel';
+import {SkillCarousel} from './components/SkillComponents/SkillsCarousel';
 
   <Header />
 
@@ -10,7 +10,7 @@ export const HomePage = () => {
     <div className="container text-center">
       <h1>Ra1to code</h1>
 
-      <img src={profileImage} className="profileImage" alt="プロフィール画像"/>
+      <img src={ProfileImage} className="profileImage" alt="プロフィール画像"/>
 
       <p>
         Ra1to codeです。普段は個人でプログラミングをYoutubeや書籍にて学習してます。<br/>
