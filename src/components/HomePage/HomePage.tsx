@@ -1,19 +1,16 @@
-import ProfileImage from './Images/Blackholl';
-import {Header} from './components/HeaderComponents/Header'
-import {SkillsSection} from './components/SkillComponents/SkillsSection';
-import {SkillCarousel} from './components/SkillComponents/SkillsCarousel';
-
-  <Header />
+import ProfileImage from '../Images/blackholl.gif';
+import {SkillsSection} from './SkillComponents/SkillsSection';
+import {SkillsCarousel} from './SkillComponents/SkillsCarousel';
 
 export const HomePage = () => {
   return (
     <div className="container text-center">
       <h1>Ra1to code</h1>
 
-      <img src={ProfileImage} className="profileImage" alt="プロフィール画像"/>
+      <img src={ProfileImage} className="ProfileImage" alt="プロフィール画像"/>
 
       <p>
-        Ra1to codeです。普段は個人でプログラミングをYoutubeや書籍にて学習してます。<br/>
+        Raito codeです。普段は個人でプログラミングをYoutubeや書籍にて学習してます。<br/>
         主にHTML/CSS/Javascriptをメインに扱っており、次はGoとPythonを学習する予定です。<br/>
         趣味は筋トレです。（最近増量を頑張ってます、しんどいです）
       </p>
@@ -65,8 +62,8 @@ export const HomePage = () => {
       </section>
       <section className="page-section" id="services">
       </section>
-      <SkillsSection />
-      <SkillCarousel />
+        <SkillsSection />
+        <SkillsCarousel />
     </div>
   );
 }

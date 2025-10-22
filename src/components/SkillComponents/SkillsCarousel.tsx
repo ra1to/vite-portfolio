@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import html_icon from "../../Images/html_icon.png";
-import css_icon from "../../Images/css_icon.png";
-import javascript_icon from "../../Images/javascript_icon.png";
-import react_icon from "../../Images/react_icon.png";
-import nextjs_icon from "../../Images/nextjs_icon.png";
-import python_icon from "../../Images/python_icon.png";
-import Go_icon from "../../Images/Go-icon.png";
-import supabase_icon from "../../Images/Supabase_icon.png";
+import html_icon from "../../Image/html_icon.png";
+import css_icon from "../../Image/css_icon.png";
+import javascript_icon from "../../Image/javascript_icon.png";
+import react_icon from "../../Image/react_icon.png";
+import nextjs_icon from "../../Image/nextjs_icon.png";
+import python_icon from "../../Image/python_icon.png";
+import Go_icon from "../../Image/Go-icon.png";
+import supabase_icon from "../../Image/Supabase_icon.png";
 import gsap from 'gsap';
 import { Observer } from 'gsap/Observer';
 
@@ -17,9 +17,8 @@ gsap.registerPlugin(Observer);
 export const SkillsCarousel = () => {
   const carouselRef = useRef(null);
 
-  // useEffectを修正しました
   useEffect(() => {
-    const carousel = carouselRef.current;
+    const carousel= carouselRef.current;
     const images = gsap.utils.toArray('.carousel-image', carousel);
     
     const radius = 242;

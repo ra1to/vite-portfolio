@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion, AnimatePresence } from "framer-motion";
 
+//スキル格納配列
 const skills = [
   // Frontend
   {
@@ -91,7 +92,6 @@ export const SkillsSection = () => {
   const sectionRef = useRef(null);
   
   useEffect(() => {
-    // Add the DevIcon stylesheet to the document head
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css';
@@ -115,18 +115,18 @@ export const SkillsSection = () => {
     (skill) => activeCategory === "All" || skill.category === activeCategory
   );
   
-  // Sort skills by level (highest first)
+  //スキルをレベル順に並べ替え（高い順）
   const sortedSkills = [...filteredSkills].sort((a, b) => b.level - a.level);
   
-  // Split skills into two arrays for the two scrolling rows
+  // スキルを2つのスクロール行用に2つの配列に分割
   const firstRowSkills = [...sortedSkills];
-  const secondRowSkills = [...sortedSkills]; // Duplicate to ensure we have enough for both rows
+  const secondRowSkills = [...sortedSkills];
   
   const handleSkillClick = (skill) => {
     setSelectedSkill(selectedSkill?.name === skill.name ? null : skill);
   };
   
-  // Calculate progress color based on level
+  // レベルに基づいて進行状況の色を計算
   const getProgressColor = (level) => {
     if (level >= 90) return "from-emerald-500 to-green-400";
     if (level >= 80) return "from-blue-500 to-cyan-400";
@@ -136,7 +136,7 @@ export const SkillsSection = () => {
     return "from-red-500 to-orange-400";
   };
 
-  // Get category background style
+  // カテゴリ背景スタイルを取得
   const getCategoryStyle = (category) => {
     switch(category) {
       case "Frontend": return "bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-500/20";
@@ -146,7 +146,7 @@ export const SkillsSection = () => {
     }
   };
 
-  // Calculate mastery level text
+  // 習熟度レベルを計算
   const getMasteryLevel = (level) => {
     if (level >= 90) return "Expert";
     if (level >= 80) return "Advanced";
@@ -191,6 +191,7 @@ export const SkillsSection = () => {
                   : "bg-card border-border hover:bg-card/80 hover:border-primary/30"
               )}
             >
+                
               {category}
             </button>
           ))}
