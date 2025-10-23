@@ -15,11 +15,12 @@ import { Observer } from 'gsap/Observer';
 gsap.registerPlugin(Observer);
 
 export const SkillsCarousel = () => {
-  const carouselRef = useRef(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const carousel= carouselRef.current;
-    const images = gsap.utils.toArray('.carousel-image', carousel);
+    if (!carousel) return;
+    const images = gsap.utils.toArray<HTMLDivElement>('.carousel-image', carousel);
     
     const radius = 242;
     const progress = { value: 0 };
