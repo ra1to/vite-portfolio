@@ -1,6 +1,6 @@
-import ProfileImage from '../Images/blackholl.gif';
-import {SkillsSection} from './SkillComponents/SkillsSection';
-import {SkillsCarousel} from './SkillComponents/SkillsCarousel';
+import ProfileImage from '@/Image/home_icon.png';
+import {SkillsSection} from '../SkillComponents/SkillsSection';
+import {SkillsCarousel} from '../SkillComponents/SkillsCarousel';
 
 export const HomePage = () => {
   return (
@@ -10,7 +10,7 @@ export const HomePage = () => {
       <img src={ProfileImage} className="ProfileImage" alt="プロフィール画像"/>
 
       <p>
-        Raito codeです。普段は個人でプログラミングをYoutubeや書籍にて学習してます。<br/>
+        Ra1to codeです。普段は個人でプログラミングをYoutubeや書籍にて学習してます。<br/>
         主にHTML/CSS/Javascriptをメインに扱っており、次はGoとPythonを学習する予定です。<br/>
         趣味は筋トレです。（最近増量を頑張ってます、しんどいです）
       </p>

@@ -61,6 +61,20 @@ const skills :Skill[] = [
     icon: "devicon-nodejs-plain",
     description: "Server-side JavaScript, RESTful APIs, and microservices"
   },
+   { 
+    name: "Go", 
+    level: 10, 
+    category: "Backend",
+    icon: "devicon-go-plain",
+    description: "学習予定"
+  },
+   { 
+    name: "Python", 
+    level: 10, 
+    category: "Backend",
+    icon: "devicon-python-plain",
+    description: "学習予定"
+  },
   { 
     name: "Supabase", 
     level: 65, 
@@ -71,25 +85,31 @@ const skills :Skill[] = [
   // Tools
   { 
     name: "Git/GitHub", 
-    level: 50, 
+    level: 65, 
     category: "Tools",
     icon: "devicon-git-plain",
     description: "Version control, collaborative workflows, and CI/CD integration"
   },
   { 
     name: "Figma", 
-    level: 45, 
+    level: 40, 
     category: "Tools",
     icon: "devicon-figma-plain",
     description: "UI/UX design, prototyping, and design system management"
   },
   { 
     name: "VS Code", 
-    level: 70, 
+    level: 80, 
     category: "Tools",
     icon: "devicon-vscode-plain",
     description: "Advanced IDE customization, extensions, and productivity workflows"
-  },
+  }, 
+  { 
+    name: "AWS", 
+    level: 20, 
+    category: "Tools",
+    icon: "devicon-amazonwebservices-plain",
+  }
 ];
 
 const categories = ["All","Frontend", "Backend", "Tools"];
@@ -183,7 +203,7 @@ export const SkillsSection = () => {
       <div className="container mx-auto max-w-6xl z-10 relative">
         <div className="flex flex-col md:flex-row justify-between items-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-center md:text-left" data-aos="fade-right">
-            My <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">Technical Skills</span>
+            My <span className="bg-clip-text text-transparent bg-linear-to-r from-primary to-primary/70">Technical Skills</span>
           </h2>
         </div>
 
@@ -237,7 +257,7 @@ export const SkillsSection = () => {
                       <div className="relative w-full h-2.5 rounded-full overflow-hidden bg-secondary/50 mb-2">
                         <div
                           style={{ width: `${skill.level}%` }}
-                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.level)}`}
+                          className={`absolute top-0 left-0 h-full rounded-full bg-linear-to-r ${getProgressColor(skill.level)}`}
                         />
                       </div>
                       
@@ -278,7 +298,7 @@ export const SkillsSection = () => {
                       <div className="relative w-full h-2.5 rounded-full overflow-hidden bg-secondary/50 mb-2">
                         <div
                           style={{ width: `${skill.level}%` }}
-                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.level)}`}
+                          className={`absolute top-0 left-0 h-full rounded-full bg-linear-to-r ${getProgressColor(skill.level)}`}
                         />
                       </div>
                       
@@ -326,7 +346,7 @@ export const SkillsSection = () => {
                       <div className="relative w-full h-2.5 rounded-full overflow-hidden bg-secondary/50 mb-2">
                         <div
                           style={{ width: `${skill.level}%` }}
-                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.level)}`}
+                          className={`absolute top-0 left-0 h-full rounded-full bg-linear-to-r ${getProgressColor(skill.level)}`}
                         />
                       </div>
                       
@@ -367,7 +387,7 @@ export const SkillsSection = () => {
                       <div className="relative w-full h-2.5 rounded-full overflow-hidden bg-secondary/50 mb-2">
                         <div
                           style={{ width: `${skill.level}%` }}
-                          className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(skill.level)}`}
+                          className={`absolute top-0 left-0 h-full rounded-full bg-linear-to-r ${getProgressColor(skill.level)}`}
                         />
                       </div>
                       
@@ -424,7 +444,7 @@ export const SkillsSection = () => {
                 <div className="relative w-full h-3 rounded-full overflow-hidden bg-secondary/50 mb-3">
                   <div
                     style={{ width: `${selectedSkill.level}%` }}
-                    className={`absolute top-0 left-0 h-full rounded-full bg-gradient-to-r ${getProgressColor(selectedSkill.level)}`}
+                    className={`absolute top-0 left-0 h-full rounded-full bg-linear-to-r ${getProgressColor(selectedSkill.level)}`}
                   />
                 </div>
                 

@@ -1,13 +1,13 @@
 import './App.css';
-import {BlogPage} from './components/BlogPage';
+import {BlogPage} from './components/HeaderComponents/BlogComponent/BlogPage';
 import {Header} from './components/HeaderComponents/Header';
 import {HomePage} from './components/HomePage/HomePage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
-function App() {
+function App () {
   return (
-    <BrowserRouter basename="/Portfolio">
+    <BrowserRouter>
         <div className="App">
         <Header />
 
