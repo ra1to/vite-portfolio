@@ -25,7 +25,7 @@ export const SkillsCarousel = () => {
     const radius = 242;
     const progress = { value: 0 };
 
-    //Observer.createの結果を変数に保存する
+    //Observer.createの結果を変数に保存
     const observerInstance = Observer.create({
       target: carousel,
       type: "wheel,pointer",

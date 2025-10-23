@@ -66,7 +66,6 @@ const skills :Skill[] = [
     level: 65, 
     category: "Backend",
     icon: "devicon-supabase-plain",
-    // description: "Relational database design, complex queries, and performance optimization"
   },
 
   // Tools
