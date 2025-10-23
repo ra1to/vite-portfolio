@@ -11,7 +11,7 @@ interface Skill {
   level: number;
   category: "Frontend" | "Backend" | "Tools" | "Database"; 
   icon: string;
-  description?: string; // descriptionがない要素もあるため、オプショナルにする
+  description?: string;
 }
 
 //スキル格納配列
