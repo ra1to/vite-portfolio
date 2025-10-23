@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import html_icon from "../../Image/html_icon.png";
 import css_icon from "../../Image/css_icon.png";
 import javascript_icon from "../../Image/javascript_icon.png";
