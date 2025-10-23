@@ -4,8 +4,18 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion, AnimatePresence } from "framer-motion";
 
+
+
+interface Skill {
+  name: string;
+  level: number;
+  category: "Frontend" | "Backend" | "Tools" | "Database"; 
+  icon: string;
+  description?: string; // descriptionがない要素もあるため、オプショナルにする
+}
+
 //スキル格納配列
-const skills = [
+const skills :Skill[] = [
   // Frontend
   {
     name: "HTML/CSS", 
@@ -87,7 +97,7 @@ const categories = ["All","Frontend", "Backend", "Tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedSkill, setSelectedSkill] = useState(null);
+  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
   const [,setMounted] = useState(false);
   const sectionRef = useRef(null);
   
@@ -122,12 +132,12 @@ export const SkillsSection = () => {
   const firstRowSkills = [...sortedSkills];
   const secondRowSkills = [...sortedSkills];
   
-  const handleSkillClick = (skill) => {
+  const handleSkillClick = (skill:Skill) => {
     setSelectedSkill(selectedSkill?.name === skill.name ? null : skill);
   };
   
   // レベルに基づいて進行状況の色を計算
-  const getProgressColor = (level) => {
+  const getProgressColor = (level : number) => {
     if (level >= 90) return "from-emerald-500 to-green-400";
     if (level >= 80) return "from-blue-500 to-cyan-400";
     if (level >= 70) return "from-indigo-500 to-blue-400";
@@ -137,7 +147,7 @@ export const SkillsSection = () => {
   };
 
   // カテゴリ背景スタイルを取得
-  const getCategoryStyle = (category) => {
+  const getCategoryStyle = (category : string) => {
     switch(category) {
       case "Frontend": return "bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-500/20";
       case "Backend": return "bg-gradient-to-br from-emerald-500/10 to-green-500/10 border-emerald-500/20";
@@ -147,7 +157,7 @@ export const SkillsSection = () => {
   };
 
   // 習熟度レベルを計算
-  const getMasteryLevel = (level) => {
+  const getMasteryLevel = (level : number) => {
     if (level >= 90) return "Expert";
     if (level >= 80) return "Advanced";
     if (level >= 70) return "Proficient";
@@ -190,7 +200,7 @@ export const SkillsSection = () => {
                   ? "bg-primary text-primary-foreground border-primary shadow-primary/20"
                   : "bg-card border-border hover:bg-card/80 hover:border-primary/30"
               )}
-            >
+             >
                 
               {category}
             </button>
@@ -443,7 +453,7 @@ export const SkillsSection = () => {
         </div>
 
       {/* CSS for scrolling animations */}
-      <style jsx>{`
+      {`
         .skills-scroll-container {
           width: 100%;
           overflow: hidden;
@@ -483,8 +493,8 @@ export const SkillsSection = () => {
         /* Pause animations on hover */
         .skills-scroll-container:hover .skills-scroll-content {
           animation-play-state: paused;
-        }
-      `}</style>
+        }`
+      }
     </section>
   );
 };
