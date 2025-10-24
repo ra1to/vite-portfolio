@@ -109,6 +109,12 @@ const skills :Skill[] = [
     level: 20, 
     category: "Tools",
     icon: "devicon-amazonwebservices-plain",
+  },
+  { 
+    name: "Docker", 
+    level: 50, 
+    category: "Tools",
+    icon: "devicon-docker-plain",
   }
 ];
 

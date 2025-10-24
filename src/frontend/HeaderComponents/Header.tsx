@@ -16,7 +16,7 @@ export const Header = () => {
             <Link to="/blog">ブログ</Link>
           </li>
           <li>
-            <a href="https://twitter.com/your_account" target="_blank" rel="noopener noreferrer">SNS</a>
+            <a href="https://x.com/skyappsfree" target="_blank" rel="noopener noreferrer">SNS</a>
           </li>
         </ul>
       </nav>

@@ -1,7 +1,7 @@
 import './App.css';
-import {BlogPage} from './components/HeaderComponents/BlogComponent/BlogPage';
-import {Header} from './components/HeaderComponents/Header';
-import {HomePage} from './components/HomePage/HomePage';
+import BlogPage from '@/frontend/HeaderComponents/BlogPage';
+import {Header} from '@/frontend/HeaderComponents/Header';
+import {HomePage} from '@/frontend/HomePage/HomePage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
