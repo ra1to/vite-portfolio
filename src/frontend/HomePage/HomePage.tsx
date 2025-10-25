@@ -4,7 +4,7 @@ import {SkillsCarousel} from '../SkillComponents/SkillsCarousel';
 
 export const HomePage = () => {
   return (
-    <div className="container text-center">
+    <div className="container text-center" aline-item="center">
       <h1>Ra1to code</h1>
 
       <img src={ProfileImage} className="ProfileImage" alt="プロフィール画像"/>
