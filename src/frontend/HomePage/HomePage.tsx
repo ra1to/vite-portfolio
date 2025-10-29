@@ -1,6 +1,5 @@
 import ProfileImage from '@/Image/home_icon.png';
 import {SkillsSection} from '../SkillComponents/SkillsSection';
-import {SkillsCarousel} from '../SkillComponents/SkillsCarousel';
 
 export const HomePage = () => {
   return (
@@ -63,7 +62,6 @@ export const HomePage = () => {
       <section className="page-section" id="services">
       </section>
         <SkillsSection />
-        <SkillsCarousel />
     </div>
   );
 }
