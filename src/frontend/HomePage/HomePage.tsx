@@ -17,8 +17,8 @@ export const HomePage = () => {
       <section className="page-section" id="services">
         <div className="service">
           <div className="text-center">
-            <h2 className="section-heading text-uppercase">PORTFOLIO</h2>
-            <h3 className="section-subheading text-muted mb-5">私が作った作品一覧です</h3>
+            <h2 className="section-heading text-uppercase">My Project</h2>
+            <h3 className="section-subheading text-muted mb-5">メモリ効率を重視してます</h3>
           </div>
           <div className="row text-center">
             <div className="col-md-4">
